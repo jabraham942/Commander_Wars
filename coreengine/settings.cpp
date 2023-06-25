@@ -1205,7 +1205,7 @@ void Settings::setup()
         new Value<qint32>{"Sound", "TotalVolume", &m_TotalVolume, 100, 0, 100},
         new Value<qint32>{"Sound", "MusicVolume", &m_MusicVolume, 80, 0, 100},
         new Value<qint32>{"Sound", "SoundVolume", &m_SoundVolume, 100, 0, 100},
-        new Value<bool>{"Sound", "Muted", &m_muted, false, false, true},
+        new Value<bool>{"Sound", "Muted", &m_muted, true, false, true},
 #ifdef AUDIOSUPPORT
         new AudioDeviceValue{"Sound", "AudioDevice", &m_audioOutput, DEFAULT_AUDIODEVICE},
 #endif
