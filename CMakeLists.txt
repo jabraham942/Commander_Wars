@@ -17,6 +17,12 @@ set(CMAKE_INCLUDE_CURRENT_DIR ON)
 set(CMAKE_CXX_STANDARD 20)
 set(CMAKE_CXX_STANDARD_REQUIRED ON)
 
+set(Qt6_DIR "~/Qt/6.5.1/macos/lib/cmake/Qt6")
+set(XDG_RUNTIME_DIR "/run/user/1000")
+set(XKB_INCLUDE_DIR "/usr/include/xcb")
+set(XKB_LIBRARY "/usr/lib/x86_64-linux-gnu/")
+set(Vulkan_INCLUDE_DIR "/usr/lib/x86_64-linux-gnu/")
+
 # Instruct CMake to run moc automatically when needed.
 set(CMAKE_AUTOMOC ON)
 set(CMAKE_AUTOUIC ON)
