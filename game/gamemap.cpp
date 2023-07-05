@@ -1229,10 +1229,23 @@ void GameMap::setZoom(qint32 zoom)
     }
     // limit zoom
 
-    float minLimit = 1.0f / 8.0f;
+    #ifndef USE_WIDER_ZOOM_RANGE
+        float minLimit = 1.0f;
+    #else
+        float minLimit = 1.0f / 8.0f;
+    #endif
+
+    #ifndef USE_WIDER_ZOOM_RANGE
+    if (curZoom > 1.0f)
+    #else
     if (curZoom > 16.0f)
-    {
+    #endif
+    {   
+        #ifndef USE_WIDER_ZOOM_RANGE
+        curZoom = 1.0f;
+        #else
         curZoom = 16.0f;
+        #endif
     }
     else if (curZoom < minLimit)
     {
